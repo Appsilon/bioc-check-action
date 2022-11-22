@@ -1,7 +1,7 @@
 # BiocCheck Action
 
-[![Action Test](https://github.com/insightsengineering/bioc-check-action/actions/workflows/test-action.yaml/badge.svg)](https://github.com/insightsengineering/bioc-check-action/actions/workflows/test-action.yaml)
-[![SuperLinter](https://github.com/insightsengineering/bioc-check-action/actions/workflows/linter.yaml/badge.svg)](https://github.com/insightsengineering/bioc-check-action/actions/workflows/linter.yaml)
+[![Action Test](https://github.com/Appsilon/bioc-check-action/actions/workflows/test-action.yaml/badge.svg)](https://github.com/Appsilon/bioc-check-action/actions/workflows/test-action.yaml)
+[![SuperLinter](https://github.com/Appsilon/bioc-check-action/actions/workflows/linter.yaml/badge.svg)](https://github.com/Appsilon/bioc-check-action/actions/workflows/linter.yaml)
 
 ## Description
 
@@ -45,7 +45,7 @@ jobs:
         with:
           cache: true
       - name: Run BiocCheck
-        uses: insightsengineering/bioc-check-action@v1
+        uses: Appsilon/bioc-check-action@v1
 ```
 
 2. Create a PR against your repository to test and use the action.
