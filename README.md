@@ -19,11 +19,7 @@ Composite
 ---
 name: BiocCheck
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
+on: push
 
 jobs:
   bioccheck:
@@ -32,20 +28,28 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+
       - name: Setup Pandoc
         uses: r-lib/actions/setup-pandoc@v2
+
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
         with:
           r-version: release
           http-user-agent: release
           use-public-rspm: true
+
       - name: Install Deps
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          cache: true
+          cache: false
+          pak-version: 'devel'
+
       - name: Run BiocCheck
-        uses: insightsengineering/bioc-check-action@v1
+        uses: insightsengineering/bioc-check-action@v1.2.1
+        with:
+          new-package: true
+          no-cache: true
 ```
 
 2. Create a PR against your repository to test and use the action.
