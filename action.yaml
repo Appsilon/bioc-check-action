@@ -222,9 +222,7 @@ runs:
         run: |
           echo -e "⌛️ Running: ${GITHUB_ACTION_PATH}/BiocCheck.R ${BIOC_OPTIONS} ${{ inputs.path }}\n\n"
           echo "🔬 ------------------------------------------- 🔬"
-          ${GITHUB_ACTION_PATH}/BiocCheck.R \
-            ${BIOC_OPTIONS} ${{ inputs.path }} 2>&1 | \
-            tee result.txt || echo
+          ${GITHUB_ACTION_PATH}/BiocCheck.R ${BIOC_OPTIONS} ${{ inputs.path }} 2>&1 | tee result.txt || echo
           grep "ERROR:" result.txt > bioccheck-errors
           grep "NOTE:" result.txt > bioccheck-notes
           grep "WARNING:" result.txt > bioccheck-warnings
