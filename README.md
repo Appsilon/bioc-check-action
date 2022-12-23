@@ -50,6 +50,7 @@ jobs:
         with:
           new-package: true
           no-cache: true
+          allow-failure: true
 ```
 
 2. Create a PR against your repository to test and use the action.
