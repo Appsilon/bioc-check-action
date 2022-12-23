@@ -61,7 +61,7 @@ Note that you may also use the script from this action in standalone mode by run
 ```bash
 # Download the script
 wget -O BiocCheck.R \
-  https://raw.githubusercontent.com/insightsengineering/bioc-check-action/main/BiocCheck.R
+  https://raw.githubusercontent.com/Appsilon/bioc-check-action/main/BiocCheck.R
 # Making the script executable
 chmod +x BiocCheck.R
 # Run the script
